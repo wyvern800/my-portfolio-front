@@ -1,0 +1,133 @@
+body {
+  background: rgb(43, 43, 43);
+  color: rgb(156, 156, 156);
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 100%;
+
+  content {
+    display: flex;
+    flex-grow: 5;
+    margin: 6px;
+
+    .main-left {
+      background-color: rgb(31, 30, 30);
+      border-right: 3px solid rgb(144, 80, 165);
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      flex-grow: 5;
+
+      margin: 5px;
+    }
+
+    .main-right {
+      background-color: rgb(31, 30, 30);
+      border-right: 3px solid rgb(144, 80, 165);
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      flex-grow: 1;
+
+      margin: 5px;
+    }
+  }
+
+  nav {
+    flex-grow: 3;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../assets/head.jpg);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      font-size: 50px;
+      padding: 20px;
+      font-family: "Pattaya", sans-serif;
+      color: white;
+      text-shadow: 2px 2px 30px #000000;
+    }
+  }
+
+  section {
+    flex-grow: 5;
+    justify-content: center;
+
+    background-color: rgb(31, 30, 30);
+    border-right: 3px solid rgb(144, 80, 165);
+
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+
+    .footer-left-section {
+      flex-grow: 1;
+      margin: 10px;
+      background-color: rgb(31, 30, 30);
+      border-radius: 80px 0px 0px 80px;
+      border-right: 3px solid rgb(144, 80, 165);
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      img {
+        width: 15%;
+        min-width: 100px;
+        border-radius: 100px;
+        border: 2px solid white;
+        padding: 3px;
+        margin: 5px;
+      }
+    }
+
+    .footer-middle-section {
+      flex-grow: 2;
+      margin: 10px;
+      background-color: rgb(31, 30, 30);
+      border-radius: 5px;
+      border-right: 3px solid rgb(144, 80, 165);
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      p {
+        font-weight: bold;
+        font-size: 15px;
+      }
+
+      ul {
+        list-style-type: none;
+      }
+    }
+
+    .footer-right-section {
+      flex-grow: 1;
+      margin: 10px;
+      background-color: rgb(31, 30, 30);
+      border-radius: px;
+      border-right: 3px solid rgb(144, 80, 165);
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .socials {
+      }
+    }
+  }
+}
