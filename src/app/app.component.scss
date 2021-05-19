@@ -7,6 +7,17 @@ body {
   height: 100vh;
   max-width: 100%;
 
+  .content-header {
+    background-color: #1a1a1a;
+    width: 100%;
+
+    span {
+      margin-left: 30px;
+      font-size: 20px;
+      color: rgba(133, 107, 189, 1);
+    }
+  }
+
   content {
     display: flex;
     flex-grow: 5;
@@ -23,6 +34,12 @@ body {
       flex-grow: 5;
 
       margin: 5px;
+
+      max-width: 70%;
+
+      p {
+        margin: 10px;
+      }
     }
 
     .main-right {
@@ -40,7 +57,7 @@ body {
   }
 
   nav {
-    flex-grow: 3;
+    flex-grow: 6;
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(../assets/head.jpg);
@@ -53,7 +70,7 @@ body {
       font-size: 50px;
       padding: 20px;
       font-family: "Pattaya", sans-serif;
-      color: white;
+      color: rgb(218, 218, 218);
       text-shadow: 2px 2px 30px #000000;
     }
   }
@@ -75,7 +92,9 @@ body {
 
     .footer-left-section {
       flex-grow: 1;
-      margin: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 10px;
       background-color: rgb(31, 30, 30);
       border-radius: 80px 0px 0px 80px;
       border-right: 3px solid rgb(144, 80, 165);
@@ -96,7 +115,11 @@ body {
 
     .footer-middle-section {
       flex-grow: 2;
-      margin: 10px;
+
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+
       background-color: rgb(31, 30, 30);
       border-radius: 5px;
       border-right: 3px solid rgb(144, 80, 165);
@@ -117,16 +140,21 @@ body {
 
     .footer-right-section {
       flex-grow: 1;
-      margin: 10px;
+
       background-color: rgb(31, 30, 30);
       border-radius: px;
       border-right: 3px solid rgb(144, 80, 165);
+
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 10px;
 
       display: flex;
       flex-direction: column;
       align-items: center;
 
       .socials {
+
       }
     }
   }
