@@ -7,6 +7,12 @@ body {
   height: 100vh;
   max-width: 100%;
 
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
   .content-header {
     background-color: #1a1a1a;
     width: 100%;
@@ -53,14 +59,53 @@ body {
       flex-grow: 1;
 
       margin: 5px;
+
+      .tags {
+        display: flex;
+
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 5px;
+
+        .sm {
+          background-color: #111111;
+          color: rgb(233, 149, 215);
+          padding: 6px;
+          border-radius: 8px;
+          margin: 5px;
+        }
+
+        .md {
+          background-color: #111111;
+          color: rgb(233, 149, 215);
+          padding: 6px;
+          border-radius: 8px;
+          margin: 5px;
+          font-size: 18px;
+        }
+
+        .bg {
+          background-color: #111111;
+          color: rgb(233, 149, 215);
+          padding: 6px;
+          border-radius: 8px;
+          margin: 5px;
+          font-size: 20px;
+        }
+      }
     }
   }
 
   nav {
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
     flex-grow: 6;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(../assets/head.jpg);
+    background-image: url(../assets/head.JPG);
 
     display: flex;
     justify-content: center;
@@ -91,7 +136,7 @@ body {
     flex-direction: row;
 
     .footer-left-section {
-      flex-grow: 1;
+      max-width: 550px;
       margin-left: 10px;
       margin-right: 10px;
       margin-bottom: 10px;
@@ -111,10 +156,28 @@ body {
         padding: 3px;
         margin: 5px;
       }
+
+      .about {
+        display: flex;
+        align-items: center;
+
+        flex-direction: row;
+        justify-content: center;
+
+        align-items: center;
+
+        width: 100%;
+        height: 100%;
+
+        p {
+          margin-left: 15px;
+          margin-top: 6px;
+        }
+      }
     }
 
     .footer-middle-section {
-      flex-grow: 2;
+      flex-grow: 10;
 
       margin-left: 10px;
       margin-right: 10px;
@@ -136,13 +199,39 @@ body {
       ul {
         list-style-type: none;
       }
+
+      .useful-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        align-items: center;
+
+        width: 100%;
+        height: 100%;
+
+        ul {
+          li {
+            color: white;
+            text-decoration: underline;
+
+            a:visited {
+              color: rgb(156, 156, 156);
+            }
+
+            A:hover {
+              color: rgb(144, 80, 165);
+            }
+          }
+        }
+      }
     }
 
     .footer-right-section {
-      flex-grow: 1;
+      flex-grow: 10;
 
       background-color: rgb(31, 30, 30);
-      border-radius: px;
+      border-radius: 5px;
       border-right: 3px solid rgb(144, 80, 165);
 
       margin-left: 10px;
@@ -154,8 +243,71 @@ body {
       align-items: center;
 
       .socials {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
 
+        a:hover {
+          color: rgb(218, 218, 218);
+        }
+
+        .tw {
+          background-color: #111111;
+          color: rgb(138, 80, 165);
+          padding: 10px;
+          border-radius: 8px;
+          margin: 2px;
+          border: 1px solid rgb(118, 66, 136);
+        }
+
+        .fb {
+          background-color: #111111;
+          color: rgb(63, 106, 170);
+          padding: 10px;
+          border-radius: 8px;
+          margin: 2px;
+          border: 1px solid rgb(54, 92, 148);
+        }
+
+        .tt {
+          background-color: #111111;
+          color: rgb(63, 77, 170);
+          padding: 10px;
+          border-radius: 8px;
+          margin: 2px;
+          border: 1px solid rgb(47, 57, 119);
+        }
       }
+    }
+  }
+
+  .credits {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(31, 30, 30);
+    border-radius: 0px 0px 20px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    p {
+      span {
+        font-size: 20px;
+        color: red;
+      }
+    }
+  }
+
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
     }
   }
 }

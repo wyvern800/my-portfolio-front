@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
@@ -9,6 +9,7 @@ import { NgSocialLinksModule } from 'ng-social-links';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SocialsComponent } from './socials/socials.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -22,8 +23,9 @@ import { SocialsComponent } from './socials/socials.component';
     TooltipModule.forRoot(),
     ModalModule.forRoot(),
     NgSocialLinksModule.forRoot(),
+    FontAwesomeModule
   ],
-  providers: [],
+  providers: [Title],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
